@@ -6,20 +6,13 @@ $fileName = 'names-short-list.txt';
 $fullNames = loadFullNames($fileName);
 
 $firstNames = loadFirstNames($fullNames);
+$lastNames = loadLastNames($fullNames);
 
 // $findMe = ',';
 // echo $fullNames[0] . '<br>';
 // echo strpos($fullNames[0], $findMe) . '<br>';
 // echo substr($fullNames[0], 0, strpos($fullNames[0], $findMe));
 // exit();
-
-
-
-// Get all last names
- foreach ($fullNames as $fullName) {
-     $stopHere = strpos($fullName, ",");
-     $lastNames[] = substr($fullName, 0, $stopHere);
- }
 
 // Get valid names
 for($i = 0; $i < sizeof($fullNames); $i++) {

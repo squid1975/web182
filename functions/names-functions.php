@@ -1,7 +1,7 @@
 <?php 
 
 function loadFullNames($fileName) {
-  
+
   $lineNumber = 0;
 
   // Load up the array
@@ -16,4 +16,15 @@ function loadFullNames($fileName) {
   $lineNumber++;
   $nextName = fgets($FH);
   }
+  return $fullNames;
+}
+
+function loadFirstNames($fullNames){
+
+    // Get all first names
+  foreach($fullNames as $fullName) {
+    $startHere = strpos($fullName, ",") + 1;
+    $firstNames[] = trim(substr($fullName, $startHere));
+  }
+  return $firstNames;
 }

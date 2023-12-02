@@ -1,5 +1,6 @@
 <?php
 include 'functions/utility-functions.php';
+include 'functions/names-functions.php';
 $fileName = 'names-short-list.txt';
 
 $lineNumber = 0;

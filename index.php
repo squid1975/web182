@@ -3,20 +3,9 @@ include 'functions/utility-functions.php';
 include 'functions/names-functions.php';
 $fileName = 'names-short-list.txt';
 
-$lineNumber = 0;
+$fullNames = loadFullNames($fileName);
 
-// Load up the array
-$FH = fopen("$fileName", "r");
-$nextName = fgets($FH);
 
-while(!feof($FH)) {
-    if($lineNumber % 2 == 0) {
-        $fullNames[] = trim(substr($nextName, 0, strpos($nextName, " --")));
-    }
-
-$lineNumber++;
-$nextName = fgets($FH);
-}
 
 // $findMe = ',';
 // echo $fullNames[0] . '<br>';

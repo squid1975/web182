@@ -19,10 +19,9 @@ $validFirstNames = $validNames['validFirstNames'];
 $validLastNames = $validNames['validLastNames'];
 $validFullNames = $validNames['validFullNames'];
 
-$uniqueValidNames = array_unique($validFullNames);
+$uniqueValidNames = array_unique($validFullNames); 
 $uniqueFirstNames = array_unique($validFirstNames);
 $uniqueLastNames = array_unique($validLastNames);
-
 
 // Get the unique count of full names
 

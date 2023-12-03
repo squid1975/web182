@@ -24,6 +24,14 @@ for($i = 0; $i < sizeof($fullNames); $i++) {
     }
 }
 
+// Get the unique count of full names 
+
+// Get the unique count of last names 
+
+//Get the unique count of first names
+
+//
+
 // ~~~~~~~~~~~~ Display results ~~~~~~~~~~~~ //
 
 echo '<h1>Names - Results</h1>';

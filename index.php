@@ -14,15 +14,11 @@ $lastNames = loadLastNames($fullNames);
 // echo substr($fullNames[0], 0, strpos($fullNames[0], $findMe));
 // exit();
 
-// Get valid names
-for($i = 0; $i < sizeof($fullNames); $i++) {
-    // jam the first and last name toghether without a comma, then test for alpha-only characters
-    if(ctype_alpha($lastNames[$i].$firstNames[$i])) {
-        $validFirstNames[$i] = $firstNames[$i];
-        $validLastNames[$i] = $lastNames[$i];
-        $validFullNames[$i] = $validLastNames[$i] . ", " . $validFirstNames[$i];
-    }
-}
+$validNames = getValidNames($fullNames, $firstNames, $lastNames);
+$validFirstNames = $validNames['validFirstNames'];
+$validLastNames = $validNames['validLastNames'];
+$validFullNames = $validNames['validFullNames'];
+
 
 // Get the unique count of full names 
 
@@ -61,11 +57,4 @@ echo '<ul style="list-style-type:none">';
     }
 
 ?>
-
-
-
-
-
-
-
 

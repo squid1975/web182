@@ -7,13 +7,7 @@ $fullNames = loadFullNames($fileName);
 $firstNames = loadFirstNames($fullNames);
 $lastNames = loadLastNames($fullNames);
 
-// $findMe = ',';
-// echo $fullNames[0] . '<br>';
-// echo strpos($fullNames[0], $findMe) . '<br>';
-// echo substr($fullNames[0], 0, strpos($fullNames[0], $findMe));
-// exit();
-
-
+$validFullNames = loadValidNames($fullNames, $firstNames, $lastNames);
 // Get the unique count of full names
 
 // Get the unique count of last names 

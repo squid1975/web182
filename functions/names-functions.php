@@ -38,18 +38,7 @@ function loadLastNames($fullNames) {
   return $lastNames;
 }
 
-function getValidNames($fullNames, $firstNames, $lastNames) {
-    $validFirstNames = array();
-    $validLastNames = array();
-    $validFullNames = array();
+function loadValidNames($fullNames, $firstNames, $lastNames) {
+    
 
-    for($i = 0; $i < sizeof($fullNames); $i++) {
-      // jam the first and last name toghether without a comma, then test for alpha-only characters
-      if(ctype_alpha($lastNames[$i].$firstNames[$i])) {
-          $validFirstNames[$i] = $firstNames[$i];
-          $validLastNames[$i] = $lastNames[$i];
-          $validFullNames[] = $validLastNames[$i] . ", " . $validFirstNames[$i];
-      }
-  }
-  return array('validFirstNames' => $validFirstNames, 'validLastNames' => $validLastNames,'validFullNames' => $validFullNames,);
 }

@@ -19,14 +19,20 @@ $validFirstNames = $validNames['validFirstNames'];
 $validLastNames = $validNames['validLastNames'];
 $validFullNames = $validNames['validFullNames'];
 
+$uniqueValidNames = array_unique($validFullNames);
+$uniqueFirstNames = array_unique($validFirstNames);
+$uniqueLastNames = array_unique($validLastNames);
 
-// Get the unique count of full names 
+
+// Get the unique count of full names
 
 // Get the unique count of last names 
 
 //Get the unique count of first names
 
-//
+//Get the most common last names (names & number of occurrences)
+
+//Get the most common first names (names & number of occurrences)
 
 // ~~~~~~~~~~~~ Display results ~~~~~~~~~~~~ //
 
@@ -49,7 +55,6 @@ echo '<ul style="list-style-type:none">';
 echo "</ul>";
 
 echo '<h2>Unique Names</h2>';
-$uniqueValidNames = (array_unique($validFullNames));
 echo ("<p>There are " . sizeof($uniqueValidNames) . " Unique names</p>");
 echo '<ul style="list-style-type:none">';    
     foreach($uniqueValidNames as $uniqueValidNames) {

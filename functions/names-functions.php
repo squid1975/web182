@@ -78,3 +78,13 @@ function countMostCommonLast($fullNames, $firstNames, $lastNames) {
   return $repeatLastNames;
 }
 
+function countMostCommonFirst($fullNames, $firstNames, $lastNames) {
+  for($i = 0; $i < sizeOf($fullNames); $i++) {
+    if(ctype_alpha(str_replace("'","", $lastNames[$i].$firstNames[$i]))) {
+      $validFirstNames[$i] = $firstNames[$i];
+    }
+    $repeatFirstNames = array_count_values($validFirstNames);
+    arsort($repeatFirstNames);
+  }
+  return $repeatFirstNames;
+}

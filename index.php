@@ -17,6 +17,7 @@ $validFirstNames = loadValidFirstNames($fullNames, $firstNames, $lastNames);
 //Get the most common last names (names & number of occurrences)
 $mostCommonLastCount = countMostCommonLast($fullNames, $firstNames, $lastNames);
 //Get the most common first names (names & number of occurrences)
+$mostCommonFirstCount = countMostCommonFirst($fullNames, $firstNames, $lastNames);
 
 // ~~~~~~~~~~~~ Display results ~~~~~~~~~~~~ //
 
@@ -73,3 +74,10 @@ echo '<ul style="list-style-type:none">';
     }
 echo "</ul>";
 
+echo '<h2> Most Common First Names</h2>';
+echo "<p>The most common first name is ". array_keys($mostCommonFirstCount)[0] ." . </p>";
+echo '<ul style="list-style-type:none">';
+    foreach($mostCommonFirstCount as $name => $count) {
+        echo "<li>$name: $count</li>";
+    }
+echo "</ul>";

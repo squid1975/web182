@@ -66,3 +66,15 @@ function loadValidFirstNames($fullNames, $firstNames, $lastNames) {
   }
   return $validFirstNames;
 }
+
+function countMostCommonLast($fullNames, $firstNames, $lastNames) {
+  for($i = 0; $i < sizeOf($fullNames); $i++) {
+    if(ctype_alpha(str_replace("'","", $lastNames[$i].$firstNames[$i]))) {
+      $validLastNames[$i] = $lastNames[$i];
+    }
+    $repeatLastNames = array_count_values($validLastNames);
+    arsort($repeatLastNames);
+  }
+  return $repeatLastNames;
+}
+

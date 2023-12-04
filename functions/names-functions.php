@@ -48,3 +48,12 @@ function loadValidNames($fullNames, $firstNames, $lastNames) {
     }
     return $validFullNames;
 }
+
+function loadValidLastNames($fullNames, $firstNames, $lastNames) {
+  for($i = 0; $i < sizeOf($fullNames); $i++) {
+    if(ctype_alpha(str_replace("'","", $lastNames[$i].$firstNames[$i]))) {
+      $validLastNames[$i] = $lastNames[$i];
+    }
+  }
+  return $validLastNames;
+}

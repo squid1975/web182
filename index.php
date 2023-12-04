@@ -7,11 +7,11 @@ $fullNames = loadFullNames($fileName);
 $firstNames = loadFirstNames($fullNames);
 $lastNames = loadLastNames($fullNames);
 
-$validFullNames = loadValidNames($fullNames, $firstNames, $lastNames);
 // Get the unique count of full names
+$validFullNames = loadValidNames($fullNames, $firstNames, $lastNames);
 
 // Get the unique count of last names 
-
+$validLastNames = loadValidLastNames($fullNames, $firstNames, $lastNames);
 //Get the unique count of first names
 
 //Get the most common last names (names & number of occurrences)
@@ -39,10 +39,20 @@ echo '<ul style="list-style-type:none">';
 echo "</ul>";
 
 echo '<h2>Unique Names</h2>';
+$uniqueValidNames = (array_unique($validFullNames));
 echo ("<p>There are " . sizeof($uniqueValidNames) . " Unique names</p>");
 echo '<ul style="list-style-type:none">';    
     foreach($uniqueValidNames as $uniqueValidNames) {
         echo "<li>$uniqueValidNames</li>";
     }
+echo "</ul>";
 
+echo '<h2>Unique Last Names</h2>';
+$uniqueValidLastNames = (array_unique($validLastNames));
+echo ("<p>There are ". sizeOf($uniqueValidLastNames) . " Unique last names.</p>");
+echo '<ul style="list-style-type:none">';
+    foreach($uniqueValidLastNames as $uniqueValidLastNames){
+        echo "<li>$uniqueValidLastNames</li>";
+    }
+echo "</ul>";
 
